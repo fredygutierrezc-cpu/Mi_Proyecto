@@ -19,17 +19,18 @@ class Conexion:
             return conexion
         except Exception as e:
             print(f"Error al conectar a la base de datos: {e}")
+        #Muestra mensajes d error si falla la conxcion y devuelve nulo
             return None
     
     @staticmethod
     def cerrar_conexion(conexion):
-        """Cierra la conexión de forma segura"""
+        #Cierra la conexión de forma segura
         if conexion:
             conexion.close()
     
     @staticmethod
     def crear_tablas(conexion):
-        """Crea las tablas si no existen"""
+        #Crea las tablas si no existen
         try:
             cursor = conexion.cursor()
             cursor.execute("""
