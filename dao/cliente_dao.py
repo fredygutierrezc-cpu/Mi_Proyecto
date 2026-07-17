@@ -1,12 +1,14 @@
+#Importa la conecion con la base de datos 
 from config.conexcion import Conexion
+#Importa el modulo de la entidad cliente
 from modelo.cliente import Cliente
+#Importa librerias para manejar rutas del proyecto 
 import sys
 import os
 
 # Agregar ruta raíz del proyecto
+#asi se puede importar  los modulos sin eerrores  de ubicacion
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from modelo.cliente import Cliente
 
 class ClienteDAO:
     #Data Access Object para la tabla Clientes
